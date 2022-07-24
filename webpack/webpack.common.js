@@ -1,11 +1,12 @@
 const path = require('path');
 
+const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
   entry: path.join(__dirname, '../src/index'),
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
+    extensions: ['.ts', '.js'],
   },
   module: {
     rules: [
@@ -26,6 +27,11 @@ const config = {
         collapseWhitespace: true,
       },
     }),
+    new ESLintPlugin({
+      context: path.resolve(__dirname, 'src/'),
+      failOnWarning: true,
+      extensions: ['js', 'ts']
+    })
   ],
 };
 

@@ -2,12 +2,25 @@
   "compilerOptions": {
     "target": "esnext",
     "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "strict": true,
     "noEmit": true,
-    "jsx": "react",
     "lib": ["es6", "dom"],
     "module": "commonjs",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
   },
-  "include": ["./src"],
+  "include": [
+    "src/**/*.ts",
+    "tests/**/*.ts",
+  ],
   "exclude": ["node_modules", "build"]
 }

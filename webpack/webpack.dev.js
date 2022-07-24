@@ -10,6 +10,9 @@ const config = {
     path: path.join(__dirname, '../build'),
     filename: 'bundle.js',
   },
+  devServer: {
+    port: 8080
+  }
 };
 
 module.exports = merge(common, config);

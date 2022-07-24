@@ -1,7 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
-    'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
   ],
   rules: {
@@ -20,5 +19,5 @@ module.exports = {
         '@typescript-eslint/no-var-requires': 'off',
       },
     },
-  ],
+  ]
 };

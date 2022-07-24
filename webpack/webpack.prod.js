@@ -12,7 +12,9 @@ const config = {
     filename: 'js/main.[contentHash].js',
     publicPath: './',
   },
-  plugins: [new CleanWebpackPlugin()],
+  plugins: [
+    new CleanWebpackPlugin()
+  ],
 };
 
 module.exports = merge(common, config);
